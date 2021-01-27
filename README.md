@@ -10,3 +10,4 @@ Version 1.00 22.01.2021
 - Sections
 - Footer
 
+Version 1.1 27.02.2021
