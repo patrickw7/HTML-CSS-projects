@@ -11,3 +11,7 @@ Version 1.00 22.01.2021
 - Footer
 
 Version 1.1 27.02.2021
+- Navigation completly rebuilt with float standard and icons added
+- New class clearfix
+- New logo and background with attachment function.
+- Text shadow after navigate on "Warsaw Tea Room"
