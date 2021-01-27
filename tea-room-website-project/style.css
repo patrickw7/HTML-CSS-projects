@@ -6,6 +6,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,72 +14,84 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+nav {
+  background-color: #000000;
+  padding: 10px 0 10px 50px;
+
+}
+
+nav ul {
+  list-style: none;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav ul li {
+  float: left;
+  width: 14%;
+  margin: 0 20px;
+}
+
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  font-family: font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: gray;
+  border: 2px solid gray;
+  text-decoration: none;
+  transition: 1s;
+
+}
+
+nav a:hover {
+  color: white;
+  border-color: white;
+  font-size: 24px;
+}
+
+nav i {
+  margin-right: 15px;
+}
+
 
 /* header menu */
 
-nav {
-  max-width: 1440px;
-  padding: 30px 0;
-  text-align: center;
-  background-color: white;
-}
-
-nav a {
-  display: inline-block;
-  font-size: 2rem;
-  font-family: 'Josefin Sans', sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #333;
-  padding: 10px;
-  margin: 0 20px;
-  transition: 0.2s;
-}
-
-
-nav a:hover {
-  border-bottom: 3px solid #AD281C;
-}
-
-
-nav a.delivery {
-  padding: 10px 15px;
-  text-align: center;
-  border: 6px double #333;
-  border-radius: 15px;
-  background-color: #AD281C;
-  font-size: 2.5rem;
-  color: white;
-  margin-left: 150px;
-  letter-spacing: 1px;
-  transition: 1.2s;
-
-}
-
-nav a.delivery:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: whitesmoke;
-}
 
 
 /* header */
 
 header {
-  height: 65vh;
-  background-image: url('tea-logo1.jpg');
+  position: relative;
+  height: 75vh;
+  background-image: url('new.tea.logo.jpg');
   background-size: cover;
+  background-position: center 77%;
+  background-attachment: fixed;
+  border: 10px solid black;
+  border-top: none;
 }
 
 header h1 {
-  margin-bottom: 50px;
-  padding-right: 25px;
-  font-size: 5rem;
-  color: white;
-  line-height: 65vh;
-  text-align: right;
-  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  font-size: 36px;
+  font-style: italic;
+  color: #111;
+  font-family: 'Josefin Sans', sans-serif;
+  bottom: 40%;
+  left: 10%;
+  cursor: pointer;
+  transition: 2s;
+
 }
 
+
+header h1:hover {
+  text-shadow: 5px 5px 10px #111;
+  font-size: 40px;
+}
 
 /*main section */
 
@@ -157,4 +170,10 @@ footer {
   color: whitesmoke;
   text-align: center;
   font-size: 1.6rem;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
 }
