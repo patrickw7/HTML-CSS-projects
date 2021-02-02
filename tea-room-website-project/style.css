@@ -9,10 +9,21 @@
   box-sizing: border-box;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
 html {
   font-size: 10px;
   font-family: 'Lato', sans-serif;
+  background-color: #E4D6BC;
 }
+
+/* navigacja*/
+
 
 nav {
   background-color: #000000;
@@ -57,21 +68,20 @@ nav i {
 }
 
 
-/* header menu */
-
-
-
 /* header */
+
+
 
 header {
   position: relative;
   height: 75vh;
-  background-image: url('new.tea.logo.jpg');
+  background-image: url('img/new.tea.logo.jpg');
   background-size: cover;
   background-position: center 77%;
   background-attachment: fixed;
-  border: 10px solid black;
+  border: 4px solid black;
   border-top: none;
+  margin-bottom: 40px;
 }
 
 header h1 {
@@ -93,87 +103,254 @@ header h1:hover {
   font-size: 40px;
 }
 
-/*main section */
+/*section first*/
 
-main {
-  max-width: 1440px;
-  margin: 10vh auto;
+section.first {
+  margin: 0 100px 50px;
 }
 
-main p.description {
-  font-size: 2.2rem;
+h1.motto {
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
   text-align: center;
-  margin: 0 30px 50px 30px;
-  line-height: 180%;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+
+.first .sp1 img {
+  max-width: 25vw;
+  border: 2px solid black;
+}
+
+div.sp1 {
+  float: left;
+  width: 33%;
+  padding: 30px;
 }
 
 
-main div.features {
-  display: inline-block;
-  width: 33%;
-  font-size: 0;
+.sp1 h2 {
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
   margin-bottom: 10px;
 }
 
-main div.img1 {
-  height: 200px;
-  margin: 40px;
-  background-image: url(new-tea.jpg);
-  background-size: cover;
-  border: 4px solid #333;
-}
 
-main div.img2 {
-  height: 200px;
-  margin: 40px;
-  background-image: url(team.jpg);
-  background-size: cover;
-  border: 4px solid #333;
-}
-
-main div.img3 {
-  height: 200px;
-  margin: 40px;
-  background-image: url(recipes.jpg);
-  background-size: cover;
-  border: 4px solid #333;
-}
-
-
-
-main h2 {
-  font-size: 2rem;
+.sp1 p {
   text-align: center;
+  font-size: 16px;
+}
+
+/*section 2 */
+
+section.second {
+  background-color: #CE975E;
+  max-width: 1600px;
+  margin: 0 50px;
+}
+
+div.text {
+  width: 90%;
+  margin-top: 25px;
+}
+
+div.rec img {
+  display: block;
+  max-width: 39vw;
+  border: 2px solid black;
+}
+
+div.rec {
+  float: left;
+  width: 50%;
+  margin-left: 40px;
+}
+
+.text h2 {
+  font-size: 30px;
   text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 2px solid black;
 }
 
-main h2 a {
-  padding: 8px;
+.text p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 120%;
+  padding: 30px;
+}
+
+.second .recipy:nth-of-type(even) .rec {
+  float: right;
+}
+
+.second .recipy .text:nth-of-type(even) h2 {
+  margin-left: 35px;
+}
+
+.second h1 {
+  font-size: 36px;
+  text-transform: uppercase;
   text-align: center;
-  text-decoration: none;
-  color: #333;
-  border: 6px double #333;
-  border-radius: 15px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10%;
 }
 
-main h2 a:hover {
-  background-color: #AD281C;
-  color: white;
+/*section three*/
+
+section.third {
+  background-color: #C76F72;
+  max-width: 1600px;
+  margin: 0 50px;
+  padding-bottom: 50px;
+}
+
+.third h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+
+div.photo {
+  width: 40vw;
+  height: 40vh;
+  margin: 30px 28%;
+  border: 2px solid black;
+  background-position: center;
+}
+
+.third div.photo:nth-of-type(1) {
+  background-image: url(img/team1.jpg);
+}
+
+.third div.photo:nth-of-type(2) {
+  background-image: url(img/team2.jpg);
+  margin: 30px 28%;
+  background-position: top center;
+}
+
+.third div.photo:nth-of-type(3) {
+  background-image: url(img/team3.jpg);
+  margin: 30px 28%;
+}
+
+.third div.photo:nth-of-type(4) {
+  background-image: url(img/team4.jpg);
+  margin: 30px 28%;
+}
+
+.photo p {
+  text-align: center;
+  font-size: 30px;
+  color: whitesmoke;
+  line-height: 40vh;
+  text-shadow: 0 0 4px black;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 1s;
+  cursor: default;
+}
+
+.third .photo p:hover {
+  opacity: 1;
+}
+
+.third div.photo:hover {
+  background-size: 150%;
+}
+
+/* section fourth */
+
+section.fourth {
+  background-color: #593233;
+  max-width: 1600px;
+  margin: 0 50px;
+  padding-bottom: 50px;
+}
+
+.contact,
+.social {
+  float: left;
+  width: 50%;
+}
+
+.contact input,
+textarea,
+button {
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contact form {
+  margin-left: 40%;
+}
+
+.contact button {
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  padding: 8px;
+}
+
+.contact input {
+  font-size: 14px;
+  height: 40px;
+  padding: 5px;
+}
+
+textarea {
+  font-size: 14px;
+  height: 200px;
+  padding: 5px;
+}
+
+.fourth h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: 23%;
+  padding: 20px;
+}
+
+
+div.social {
+  padding-left: 12%;
+  padding-top: 2%;
+}
+
+div.media {
+  font-size: 20px;
+  margin: 0 0 20px 20px;
+}
+
+.media i {
+  font-size: 26px;
+  vertical-align: -1px;
+}
+
+.media span {
+  padding-left: 10px;
 }
 
 
 /* footer */
 
 footer {
+  margin: 0 50px;
   padding: 8px;
   background-color: #333;
   color: whitesmoke;
   text-align: center;
-  font-size: 1.6rem;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
+  font-size: 16px;
 }
