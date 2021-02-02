@@ -15,3 +15,11 @@ Version 1.1 27.02.2021
 - New class clearfix
 - New logo and background with attachment function.
 - Text shadow after navigate on "Warsaw Tea Room"
+
+Version 1.2 2.02.2021
+- three sections added
+-- first section completly rebuilt
+-- float left and right effect in second section
+-- opacity effects in third section
+-- contact form added without backend
+- social media contacts added
