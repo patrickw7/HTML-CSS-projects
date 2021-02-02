@@ -18,8 +18,8 @@ Version 1.1 27.02.2021
 
 Version 1.2 2.02.2021
 - three sections added
--a first section completly rebuilt
--b float left and right effect in second section
--c opacity effects in third section
+- first section completly rebuilt
+- float left and right effect in second section
+- opacity effects in third section
 - contact form added without backend
 - social media contacts added
