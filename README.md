@@ -23,3 +23,4 @@ Version 1.2 2.02.2021
 - opacity effects in third section
 - contact form added without backend
 - social media contacts added
+- footer done
