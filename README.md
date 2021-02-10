@@ -24,3 +24,6 @@ Version 1.2 2.02.2021
 - contact form added without backend
 - social media contacts added
 - footer done
+
+Version 1.3 10.02.2021
+- responsivity by media query method for 360px mobile
