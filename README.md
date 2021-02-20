@@ -27,3 +27,7 @@ Version 1.2 2.02.2021
 
 Version 1.3 10.02.2021
 - responsivity by media query method for 360px mobile
+
+Version 2.00 20.02.2021
+- completly rebuilt website
+- move from float to flexbox standard
