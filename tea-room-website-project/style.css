@@ -9,12 +9,6 @@
   box-sizing: border-box;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 
 html {
   font-size: 10px;
@@ -27,19 +21,20 @@ html {
 
 nav {
   background-color: #000000;
-  padding: 10px 0 10px 50px;
+  padding: 10px 0 10px 0;
 
 }
 
 nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  max-width: 1280px;
   margin: 0 auto;
 }
 
 nav ul li {
-  float: left;
-  width: 14%;
+  width: 12%;
   margin: 0 20px;
 }
 
@@ -47,7 +42,7 @@ nav ul li {
 nav ul li a {
   display: block;
   text-align: center;
-  font-family: font-family: 'Lato', sans-serif;
+  font-family:'Lato', sans-serif;
   font-size: 20px;
   letter-spacing: 1px;
   color: gray;
@@ -106,7 +101,10 @@ header h1:hover {
 /*section first*/
 
 section.first {
-  margin: 0 100px 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 h1.motto {
@@ -121,14 +119,16 @@ h1.motto {
 }
 
 .first .sp1 img {
-  max-width: 25vw;
+  align-self: center;
+  width: 80%;
   border: 2px solid black;
 }
 
 div.sp1 {
-  float: left;
-  width: 33%;
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+ flex-basis: 30%;
 }
 
 
@@ -141,6 +141,7 @@ div.sp1 {
 
 
 .sp1 p {
+  margin: 0 auto;
   text-align: center;
   font-size: 16px;
 }
@@ -148,26 +149,27 @@ div.sp1 {
 /*section 2 */
 
 section.second {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   background-color: #CE975E;
-  max-width: 1600px;
-  margin: 0 50px;
+  max-width: 1280px;
+
 }
 
 div.text {
-  width: 90%;
-  margin-top: 25px;
+width: 50%;
 }
 
 div.rec img {
-  display: block;
-  max-width: 39vw;
+  width: 100%;
   border: 2px solid black;
 }
 
 div.rec {
-  float: left;
-  width: 50%;
+  width: 40%;
   margin-left: 40px;
+  margin-bottom: 40px;
 }
 
 .text h2 {
@@ -184,15 +186,8 @@ div.rec {
   padding: 30px;
 }
 
-.second .recipy:nth-of-type(even) .rec {
-  float: right;
-}
-
-.second .recipy .text:nth-of-type(even) h2 {
-  margin-left: 35px;
-}
-
 .second h1 {
+  width: 100%;
   font-size: 36px;
   text-transform: uppercase;
   text-align: center;
@@ -205,13 +200,17 @@ div.rec {
 /*section three*/
 
 section.third {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: #C76F72;
-  max-width: 1600px;
-  margin: 0 50px;
+  max-width: 1280px;
   padding-bottom: 50px;
+  width: 100%;
 }
 
 .third h1 {
+  width: 100%;
   font-size: 36px;
   text-transform: uppercase;
   text-align: center;
@@ -222,9 +221,9 @@ section.third {
 }
 
 div.photo {
-  width: 40vw;
-  height: 40vh;
-  margin: 30px 28%;
+  width: 45%;
+  margin-right: 20px;
+  margin-bottom: 20px;
   border: 2px solid black;
   background-position: center;
   background-repeat: no-repeat;
@@ -236,25 +235,22 @@ div.photo {
 
 .third div.photo:nth-of-type(2) {
   background-image: url(img/team2.jpg);
-  margin: 30px 28%;
   background-position: top center;
 }
 
 .third div.photo:nth-of-type(3) {
   background-image: url(img/team3.jpg);
-  margin: 30px 28%;
 }
 
 .third div.photo:nth-of-type(4) {
   background-image: url(img/team4.jpg);
-  margin: 30px 28%;
 }
 
 .photo p {
   text-align: center;
   font-size: 30px;
   color: whitesmoke;
-  line-height: 40vh;
+  line-height: 30vh;
   text-shadow: 0 0 4px black;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
@@ -268,21 +264,23 @@ div.photo {
 
 .third div.photo:hover {
   background-size: 150%;
-}
+} 
 
 /* section fourth */
 
 section.fourth {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #593233;
-  max-width: 1600px;
-  margin: 0 50px;
+  max-width: 1280px;
   padding-bottom: 50px;
+  width: 100%;
 }
 
 .contact,
 .social {
-  float: left;
-  width: 50%;
+  width: 40%;
 }
 
 .contact input,
@@ -318,16 +316,18 @@ textarea {
 }
 
 .fourth h1 {
+ display: flex;
+ justify-content: center;
+  flex-basis: 100%;
   font-size: 24px;
   margin-bottom: 20px;
-  margin-left: 23%;
   padding: 20px;
 }
 
 
 div.social {
-  padding-left: 12%;
-  padding-top: 2%;
+  margin-left: 60px;
+
 }
 
 div.media {
@@ -341,6 +341,14 @@ div.media {
 }
 
 .media span {
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.social a {
+  text-decoration: none;
+  color: #000000;
   padding-left: 10px;
 }
 
@@ -348,7 +356,6 @@ div.media {
 /* footer */
 
 footer {
-  margin: 0 50px;
   padding: 8px;
   background-color: #333;
   color: whitesmoke;
@@ -356,84 +363,13 @@ footer {
   font-size: 16px;
 }
 
+
+div.wrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
 /*respons */
 
-@media (min-width: 360px) {
-  header h1 {
-    font-size: 90px;
-    line-height: 40vh;
-    color:black;
-    }
-
-    nav ul li a {
-      font-size: 38px;
-      border-style: none;
-      padding: 10px;
-    }
-
-    nav ul li {
-      width: 15%;
-      margin: 0 20px 40px;
-    }
-
-    h1.motto {
-      font-size: 38px;
-    }
-
-    .sp1 h2 {
-      font-size: 34px;
-    }
-    .sp1 p {
-      font-size: 24px;
-    }
-    .text p {
-      font-size: 24px;
-    }
-
-    div.photo {
-      border-style: none;
-    }
-
-    .third h1 {
-      border-radius: 40%;
-    }
-
-    section.third {
-      padding: 0;
-    }
-    div.photo {
-      height: 20vh;
-    }
-    .photo p {
-      line-height: 0;
-    }
-
-    .third div.photo:nth-of-type(1) {
-      margin: 0 auto 50px;
-    }
-    
-    .third div.photo:nth-of-type(2) {
-     margin: 0 auto 50px;
-    }
-    
-    .third div.photo:nth-of-type(3) {
-      margin: 0 auto 50px;
-    }
-    
-    .third div.photo:nth-of-type(4) {
-      margin: 0 auto 50px;
-    }
-
-    .fourth h1 {
-      font-size: 42px;
-    }
-
-    div.media {
-      font-size: 28px;
-    }
-
-    footer {
-      font-size: 20px;
-    }
-
-}
