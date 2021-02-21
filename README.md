@@ -31,3 +31,6 @@ Version 1.3 10.02.2021
 Version 2.00 20.02.2021
 - completly rebuilt website
 - move from float to flexbox standard
+
+Version 2.1 21.02.2021
+- now website is responsive for mobile by media query
