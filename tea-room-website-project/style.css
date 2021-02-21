@@ -28,7 +28,6 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
-  align-items: center;
   list-style: none;
   margin: 0 auto;
 }
@@ -83,10 +82,10 @@ header h1 {
   position: absolute;
   font-size: 36px;
   font-style: italic;
-  color: #111;
+  color: rgb(0, 0, 0);
   font-family: 'Josefin Sans', sans-serif;
-  bottom: 40%;
-  left: 10%;
+  bottom: 80%;
+  left: 15%;
   cursor: pointer;
   transition: 2s;
 
@@ -203,6 +202,7 @@ section.third {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: #C76F72;
   max-width: 1280px;
   padding-bottom: 50px;
@@ -292,10 +292,6 @@ button {
   margin-bottom: 15px;
 }
 
-.contact form {
-  margin-left: 40%;
-}
-
 .contact button {
   background-color: transparent;
   border: 2px solid whitesmoke;
@@ -372,4 +368,90 @@ align-items: center;
 }
 
 /*respons */
+
+@media (min-width: 365px) and (orientation: portrait) {
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 20px;
+  }
+
+  nav ul li a {
+    font-size: 36px;
+    border-style: none;
+  }
+
+  header h1 {
+    font-size: 72px;
+  }
+
+  h1.motto {
+    font-size: 36px;
+  }
+
+  .sp1 h2 {
+    font-size: 30px;
+  }
+  
+  .sp1 p {
+    font-size: 24px;
+  }
+
+  .text p {
+    font-size: 24px;
+  }
+
+  div.photo {
+    width: 45%;
+    max-height: 20vh;
+  }
+
+  .fourth h1 {
+     font-size: 36px;
+  }
+   
+   div.social {
+     margin-left: 60px;
+   
+   }
+   
+   div.media {
+     font-size: 30px;
+     margin: 0 0 20px 20px;
+   }
+
+   .contact button {
+    background-color: transparent;
+    border: 4px solid whitesmoke;
+    color: whitesmoke;
+    padding: 15px;
+  }
+   
+   footer {
+     font-size: 24px;
+   }
+
+}
+
+@media (min-width: 420px) and (orientation: landscape) {
+
+  nav ul li {
+    width: 15%;
+    margin: 0 20px;
+  }
+
+}
+
+
+
+
+
 
