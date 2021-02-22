@@ -47,14 +47,14 @@ nav ul li a {
   color: gray;
   border: 2px solid gray;
   text-decoration: none;
-  transition: 1s;
+  transition: 0.2s;
 
 }
 
 nav a:hover {
   color: white;
   border-color: white;
-  font-size: 24px;
+  transform: scale(1.1);
 }
 
 nav i {
@@ -83,9 +83,10 @@ header h1 {
   font-size: 36px;
   font-style: italic;
   color: rgb(0, 0, 0);
+  text-shadow: 0 0 10px #f70008;
   font-family: 'Josefin Sans', sans-serif;
-  bottom: 80%;
-  left: 15%;
+  bottom: 57%;
+  left: 8%;
   cursor: pointer;
   transition: 2s;
 
@@ -109,12 +110,10 @@ section.first {
 h1.motto {
   font-size: 24px;
   font-weight: 300;
-  text-transform: uppercase;
+  font-style: italic;
   text-align: center;
   margin-bottom: 40px;
   padding: 20px;
-  border: 2px solid black;
-  border-radius: 10%;
 }
 
 .first .sp1 img {
@@ -153,6 +152,7 @@ section.second {
   flex-direction: row;
   background-color: #CE975E;
   max-width: 1280px;
+  padding-bottom: 50px;
 
 }
 
@@ -174,14 +174,15 @@ div.rec {
 .text h2 {
   font-size: 30px;
   text-transform: uppercase;
+  text-align: center;
   padding: 10px;
   border-bottom: 2px solid black;
 }
 
 .text p {
-  text-align: left;
+  text-align: center;
   font-size: 18px;
-  line-height: 120%;
+  line-height: 150%;
   padding: 30px;
 }
 
@@ -190,8 +191,8 @@ div.rec {
   font-size: 36px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 40px;
-  padding: 20px;
+  margin: 20px 0 40px;
+  padding: 30px;
   border: 2px solid black;
   border-radius: 10%;
 }
@@ -200,9 +201,10 @@ div.rec {
 
 section.third {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-grow: 1;
   background-color: #C76F72;
   max-width: 1280px;
   padding-bottom: 50px;
@@ -214,16 +216,15 @@ section.third {
   font-size: 36px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 40px;
+  margin: 20px 0 40px;
   padding: 30px;
   border: 2px solid black;
   border-radius: 10%;
 }
 
 div.photo {
-  width: 45%;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  flex-basis: 40%;
+  margin-bottom: 40px;
   border: 2px solid black;
   background-position: center;
   background-repeat: no-repeat;
@@ -244,13 +245,14 @@ div.photo {
 
 .third div.photo:nth-of-type(4) {
   background-image: url(img/team4.jpg);
+  background-position: center right;
 }
 
 .photo p {
   text-align: center;
   font-size: 30px;
   color: whitesmoke;
-  line-height: 30vh;
+  line-height: 40vh;
   text-shadow: 0 0 4px black;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
@@ -297,6 +299,7 @@ button {
   border: 2px solid whitesmoke;
   color: whitesmoke;
   padding: 8px;
+  cursor: pointer;
 }
 
 .contact input {
@@ -369,7 +372,11 @@ align-items: center;
 
 /*respons */
 
-@media (min-width: 365px) and (orientation: portrait) {
+@media (min-width: 320px) and (orientation: portrait) {
+
+ header {
+  background-attachment:unset;
+ }
 
   nav ul {
     flex-direction: column;
@@ -389,12 +396,21 @@ align-items: center;
     border-style: none;
   }
 
+  nav a:hover {
+    font-size: 36px;
+  }
+
   header h1 {
     font-size: 72px;
   }
 
   h1.motto {
-    font-size: 36px;
+    font-size: 28px;
+  }
+
+  .second h1 {
+    padding: 20px;
+    border: 3px solid black;
   }
 
   .sp1 h2 {
@@ -410,8 +426,16 @@ align-items: center;
   }
 
   div.photo {
-    width: 45%;
-    max-height: 20vh;
+    width: 40%;
+    max-height: 18vh;
+  }
+  .photo p {
+    line-height: 18vh;
+  }
+
+  .third h1 {
+    padding: 20px;
+    border: 3px solid black;
   }
 
   .fourth h1 {
@@ -429,9 +453,6 @@ align-items: center;
    }
 
    .contact button {
-    background-color: transparent;
-    border: 4px solid whitesmoke;
-    color: whitesmoke;
     padding: 15px;
   }
    
@@ -439,14 +460,43 @@ align-items: center;
      font-size: 24px;
    }
 
+
 }
 
-@media (min-width: 420px) and (orientation: landscape) {
+@media (max-width: 1114px) and (orientation: landscape) {
 
   nav ul li {
     width: 15%;
     margin: 0 20px;
   }
+
+  
+  header {
+    background-attachment:unset;
+    background-position: center center;
+   }
+
+   h1.motto {
+    font-size: 24px;
+   }
+
+   .second h1 {
+    padding: 15px;
+   }
+
+   .third h1 {
+    padding: 15px;
+   }
+
+   div.photo {
+    flex-basis: 45%;
+  }
+
+  .photo p {
+    line-height: 25vh;
+  }
+
+
 
 }
 
