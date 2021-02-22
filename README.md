@@ -35,5 +35,5 @@ Version 2.00 20.02.2021
 Version 2.1 21.02.2021
 - now website is responsive for mobile by media query
 
-Version 2.1 22.02.2021
+Version 2.2 22.02.2021
 - some bugs fixed which appear on mobile
